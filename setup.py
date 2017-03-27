@@ -11,9 +11,11 @@ setup(
     license='MIT',
     install_requires=[
         'click',
+        'olefile',
+        'Pillow',
     ],
     entry_points='''
         [console_scripts]
-        imageslash=src:cmd
+        imageslash=src.imageslash:cmd
     ''',
 )
