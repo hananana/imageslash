@@ -11,7 +11,7 @@ from PIL import Image
 @click.option('--right', '-r', type=int)
 @click.option('--bottom', '-b', type=int)
 @click.option('--output', '-o')
-def cmd(target, x, y, width, height, output):
+def cmd(target, left, top, right, bottom, output):
     img = Image.open(target)
-    cropped = img.crop((x, y, width, height))
+    cropped = img.crop((left, top, right, bottom))
     cropped.save(output, 'PNG')
