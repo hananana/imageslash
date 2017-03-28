@@ -6,10 +6,10 @@ from PIL import Image
 
 @click.command()
 @click.option('--target', '-t', type=click.Path(exists=True))
-@click.option('--x', '-x', type=int)
-@click.option('--y', '-y', type=int)
-@click.option('--width', '-w', type=int)
-@click.option('--height', '-h', type=int)
+@click.option('--left', '-l', type=int)
+@click.option('--top', '-t', type=int)
+@click.option('--right', '-r', type=int)
+@click.option('--bottom', '-b', type=int)
 @click.option('--output', '-o')
 def cmd(target, x, y, width, height, output):
     img = Image.open(target)
